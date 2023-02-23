@@ -1,11 +1,13 @@
 import asTest from './as-test'
 import asCard from './as-card'
 import asSelect from './as-select'
+import asSnow from './as-snow'
 
 const components = [
     asTest,
     asCard,
-    asSelect
+    asSelect,
+    asSnow
 ]
 
 const install = Vue => {
