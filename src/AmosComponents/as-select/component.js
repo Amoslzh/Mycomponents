@@ -1,5 +1,5 @@
 export default {
-  name: 'as-test',
+  name: 'as-select',
   data() {
     return {
       checkList: [],
