@@ -15,11 +15,13 @@
       <slot name="header" :data="datt" pros2="pros2"></slot>
     </div>
 
+    <div class="des">
+      <slot name="des"></slot>
+    </div>
+
     <div class="body">
       <slot name="body"></slot>
     </div>
-
-    <slot :text="datt" msgg="nihao"></slot>
 
   </div>
 </template>
@@ -36,24 +38,32 @@ export default {
 </script>
 
 <style scoped>
+
 .main_node {
   position: relative;
-  background-color: #ffffff40;
+  background-color: #ffffff35;
   backdrop-filter: blur(10px);
   border-radius: 4px;
   padding: 8px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 .main_node:hover{
+  box-shadow: 0px 4px 10px rgba(255, 255, 136, 0.1);
+  background-color: #ffffff40;
   z-index: 2;
 }
 
-.main_node .body{
-    padding-top: 8px;
-  }
-.main_node:hover{
-  box-shadow: 0px 4px 10px rgba(255, 255, 136, 0.1);
+.main_node .des{
+  height: auto;
+  font-size: 12px;
+  color: #37373d;
 }
 
+.main_node .body{
+
+  }
 .main_node .head {
   position: relative;
   padding-bottom: 8px;
