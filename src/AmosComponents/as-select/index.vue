@@ -29,8 +29,6 @@
           <!-- 让父元素保持焦点状态 -->
           <el-checkbox-group
             v-model="checkList"
-            label="tttt"
-            style="width: 100%"
           >
             <div
               v-for="(item, index) in option"
@@ -38,7 +36,6 @@
               class="oneoption"
               @mouseenter="hover = index"
               @mouseleave="hover = -1"
-              @click="single?checkList = [item.value]:''"
             >
               <div :class="clickcheckbox?'checkhide':''">
                 <el-checkbox :label="item.value" style="width: 100%;">{{ item.label }}</el-checkbox>
@@ -46,7 +43,6 @@
               <span class="labelst" v-if="clickcheckbox">{{ item.label }}</span>
               <transition name="el-zoom-in-top">
                 <div
-                  v-if="!single"
                   class="justone"
                   v-show="hover == index"
                   @click="checkList = [item.value]"
@@ -123,13 +119,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 164px;
+  width: 164px !important;
   padding: 4px;
   background: #ffffff;
   border: 1px solid #e6e7eb;
   box-shadow: 0px 8px 20px rgba(26, 28, 36, 0.1);
   border-radius: 4px;
   cursor: auto;
+  z-index: 5;
 }
 
 .oneoption {
