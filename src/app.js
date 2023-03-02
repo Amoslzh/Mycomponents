@@ -1,6 +1,9 @@
+import examples from './examples'
 export default {
   name: 'App',
-  components: {},
+  components: {
+    ...examples
+  },
   data() {
     return {
       option: [

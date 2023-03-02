@@ -2,7 +2,7 @@
  * @Author: liangzhihao zhihao_liang@intsig.net
  * @Date: 2023-02-23 21:18:18
  * @LastEditors: liangzhihao zhihao_liang@intsig.net
- * @LastEditTime: 2023-02-23 23:15:48
+ * @LastEditTime: 2023-02-27 21:36:46
  * @FilePath: \Mycomponents\src\App.vue
  * @Description: 
  * 
@@ -16,14 +16,20 @@
     <as-snow>
       <button @click="testcg">ho</button>
       <div class="containbox">
-        <as-card style="width: 100%">
+
+        <example1></example1>
+
+        <as-card style="height: 300px">
           <template v-slot:header>选择器</template>
+          <template #des>
+            多选器，传入[{lable,value}]，选择后返回对应的value
+          </template>
           <template #body>
-            <!-- <as-select
+            <as-select
             :option="option"
             title="城市"
             @change="testcg"
-          ></as-select> -->
+          ></as-select>
 
           </template>
         </as-card>
@@ -41,7 +47,6 @@
             title="触发方式"
             :clickcheckbox="false"
             @getvalue="card2cg"
-            single
           ></as-select>
             <div class="c2box">
               <div class="linebox">

@@ -1,22 +1,23 @@
+/*
+ * @Author: liangzhihao zhihao_liang@intsig.net
+ * @Date: 2023-02-27 21:21:55
+ * @LastEditors: liangzhihao zhihao_liang@intsig.net
+ * @LastEditTime: 2023-02-27 21:40:44
+ * @FilePath: \Mycomponents\src\AmosComponents\as-select\component.js
+ * @Description: 
+ * 
+ * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
+ */
 export default {
   name: 'as-select',
   data() {
     return {
       checkList: [],
-      checked1: '',
       hover: -1,
       optionshow: false,
     };
   },
   methods: {
-    // change(dt) {
-    //   this.$emit('getvalue', dt);
-    // },
-    singlecg() { 
-      if(this.single&&this.checkList.length>1){
-        this.checkList = [this.checkList.pop()]
-      }
-    },
     keepfocus() {
       this.optionshow = true;
       //延时专业焦点 否则没法选上chekbox 只是因为有过度效果才这样
@@ -47,10 +48,6 @@ export default {
     clickcheckbox: {
       type: Boolean,
       default: true,
-    },
-    single: {
-      type: Boolean,
-      default: false,
     },
   },
 };
