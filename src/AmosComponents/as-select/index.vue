@@ -29,11 +29,6 @@
           <!-- 让父元素保持焦点状态 -->
           <el-checkbox-group
             v-model="checkList"
-<<<<<<< HEAD
-            label="tttt"
-            :max="1"
-=======
->>>>>>> fa2019ecbbaaccd4744ef66859653b0ef440237e
           >
             <div
               v-for="(item, index) in option"
@@ -41,10 +36,6 @@
               class="oneoption"
               @mouseenter="hover = index"
               @mouseleave="hover = -1"
-<<<<<<< HEAD
-              @click.self="single?checkList = [item.value]:''"
-=======
->>>>>>> fa2019ecbbaaccd4744ef66859653b0ef440237e
             >
               <div :class="clickcheckbox?'checkhide':''">
                 <el-checkbox :label="item.value" style="width: 100%;">{{ item.label }}</el-checkbox>

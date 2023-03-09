@@ -57,13 +57,8 @@ export default {
 
 .main_node .des{
   height: auto;
-<<<<<<< HEAD
-  font-size: 12px;
-  color: #37373d;
-=======
   font-size: 13px;
   color: #1e1e1e;
->>>>>>> fa2019ecbbaaccd4744ef66859653b0ef440237e
 }
 
 .main_node .body{
